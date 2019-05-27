@@ -35,7 +35,16 @@ protocol UserPoolAuthHelperlCallbacks {
     
 }
 
+
 internal class UserPoolOperationsHandler: NSObject, AWSCognitoIdentityInteractiveAuthenticationDelegate {
+    //-- CHT ADDED --
+    public var customAuthManager: AWSCognitoIdentityCustomAuthentication?
+    
+    internal func startCustomAuthentication() -> AWSCognitoIdentityCustomAuthentication {
+        return customAuthManager!
+    }
+    //----
+    
     internal var userpoolClient: AWSCognitoIdentityUserPool?
     internal var signUpUser: AWSCognitoIdentityUser?
     

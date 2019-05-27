@@ -227,6 +227,11 @@ extension AWSMobileClient: AWSIdentityProviderManager {
 
 // MARK: UserPool and Federated sign in methods
 extension AWSMobileClient {
+    //-- CHT ADDED --
+    public func setCustomAuthManager(_ customAuthManager: AWSCognitoIdentityCustomAuthentication)  {
+        UserPoolOperationsHandler.sharedInstance.customAuthManager = customAuthManager
+    }
+    //----
     
     internal convenience init(setDelegate: Bool) {
         self.init()
@@ -523,7 +528,10 @@ extension AWSMobileClient {
             self.userpoolOpsHelper.passwordAuthTaskCompletionSource!.set(result: authDetails)
             self.userpoolOpsHelper.passwordAuthTaskCompletionSource = nil
         } else {
-            user!.getSession(username, password: password, validationData: validationAttributes).continueWith { (task) -> Any? in
+            //-- CHT UPDATED --
+           // user!.getSession(username, password: password, validationData: validationAttributes).continueWith { (task) -> Any? in
+            user!.getSession().continueWith { (task) -> Any? in
+            // ----
                 if let error = task.error {
                     self.userpoolOpsHelper.currentSignInHandlerCallback?(nil, self.getMobileError(for: error))
                     self.userpoolOpsHelper.currentSignInHandlerCallback = nil
