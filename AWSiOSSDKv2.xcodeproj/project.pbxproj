@@ -1146,7 +1146,7 @@
 		EFE40B801CC5BDEF0045D710 /* strip-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = EFE40B7F1CC5BDEF0045D710 /* strip-frameworks.sh */; };
 		EFF1B9DE1CBC42DF001F4CF1 /* AWSCognitoIdentityProviderHKDF.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF1B9D81CBC42DF001F4CF1 /* AWSCognitoIdentityProviderHKDF.h */; };
 		EFF1B9DF1CBC42DF001F4CF1 /* AWSCognitoIdentityProviderHKDF.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF1B9D91CBC42DF001F4CF1 /* AWSCognitoIdentityProviderHKDF.m */; };
-		EFF1B9E01CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF1B9DA1CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.h */; };
+		EFF1B9E01CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF1B9DA1CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFF1B9E11CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF1B9DB1CBC42DF001F4CF1 /* AWSCognitoIdentityProviderSrpHelper.m */; };
 		EFF1B9E21CBC42DF001F4CF1 /* AWSCognitoIdentityUser_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF1B9DC1CBC42DF001F4CF1 /* AWSCognitoIdentityUser_Internal.h */; };
 		EFF1B9E31CBC42DF001F4CF1 /* AWSCognitoIdentityUserPool_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = EFF1B9DD1CBC42DF001F4CF1 /* AWSCognitoIdentityUserPool_Internal.h */; };
@@ -9921,6 +9921,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
